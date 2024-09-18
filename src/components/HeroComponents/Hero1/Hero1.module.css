@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.box {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: flex-start; /* Align text to the left */
+    background-image: url('salad.jpg');
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(5px);
+}
+
+.ibox {
+    width: 33vw;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    font-family: 'Poppins', sans-serif;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+}
+
+.ibox h1 {
+    font-size: 4em;
+    font-weight: 600;
+    color: #333;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.ibox p {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #555;
+}
+
+.ibox span {
+    font-size: 2em;
+    color: red;
+    font-weight: 400;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .box {
+        backdrop-filter: blur(8px);
+    }
+}
+
+@media (max-width: 992px) {
+    .ibox {
+        width: 50vw;
+        padding: 20px;
+    }
+    
+    .box {
+        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.3); /* Darker background overlay */
+    }
+}
+
+@media (max-width: 768px) {
+    .ibox {
+        width: 70vw;
+        padding: 15px;
+    }
+
+    .ibox h1 {
+        font-size: 3em;
+    }
+
+    .ibox p {
+        font-size: 1.2em;
+    }
+
+    .ibox span {
+        font-size: 1.5em;
+    }
+    
+    .box {
+        backdrop-filter: blur(12px);
+        background-color: rgba(0, 0, 0, 0.5); /* Even darker background overlay */
+    }
+}
+
+@media (max-width: 576px) {
+    .ibox {
+        width: 90vw;
+        padding: 10px;
+    }
+
+    .ibox h1 {
+        font-size: 2.5em;
+    }
+
+    .ibox p {
+        font-size: 1em;
+    }
+
+    .ibox span {
+        font-size: 1.2em;
+    }
+
+    .box {
+        backdrop-filter: blur(15px);
+        background-color: rgba(0, 0, 0, 0.7); /* Darkest background overlay */
+    }
+}
