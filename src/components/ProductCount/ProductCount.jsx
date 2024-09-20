@@ -1,8 +1,10 @@
 import React from 'react'
 import styles from './ProductCount.module.css'
+import FooterCard from '../FooterCard/FooterCard'
 
 function ProductCount() {
   return (
+    <>
     <div className={styles.box}>
         <div className={styles.boxleft}>
         <div className={styles.boxleftimage}>
@@ -90,7 +92,8 @@ function ProductCount() {
         </div>
 
     </div>
-  )
+    <FooterCard/>
+    </>)
 }
 
 export default ProductCount

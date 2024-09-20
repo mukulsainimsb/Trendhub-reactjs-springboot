@@ -1,0 +1,100 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-image: url('coverimg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    padding: 20px;
+    color: #ffffff;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.discount {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.description {
+    font-size: 1rem;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn {
+    background-color: #FF8396;
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ff4d66;
+}
+
+@media (max-width: 768px) {
+    .box {
+        padding: 15px;
+        height: auto;
+    }
+
+    .discount,
+    .title,
+    .description {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .inputContainer {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .btn {
+        width: auto;
+        max-width: 150px;
+        padding: 10px; 
+        align-self: center; 
+    }
+}
+
+@media (max-width: 480px) {
+   .title {
+       font-size: 1.5rem; 
+   }
+
+   .discount {
+       font-size: 1rem; 
+   }
+}
+
+.ibox{
+    width: 50vw; 
+}
