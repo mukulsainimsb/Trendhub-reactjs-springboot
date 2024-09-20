@@ -91,9 +91,13 @@ body {
 }
 
 .btn2 {
-    background-color: #2bbef9 !important;
-    font-size: 30px !important;
+    background-color:  #ff6347 !important;
+    color: white !important;
+    font-size: 20px !important;
     color: #fff;
+    border-radius: 30px !important;
+    padding: 16px !important;
+    
 }
 
 .btn2:hover {

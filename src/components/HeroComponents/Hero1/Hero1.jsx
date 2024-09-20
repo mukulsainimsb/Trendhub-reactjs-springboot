@@ -1,7 +1,9 @@
 import React from 'react'
 import styles from './Hero1.module.css'
+import BestSellers from '../../BestSellers/BestSellers'
 function Hero1() {
   return (
+    <>
     <div className={styles.mainbox}>
     <div className={styles.box}>
       <div className={styles.ibox}>
@@ -11,10 +13,11 @@ function Hero1() {
         <p>from<span>$7.99</span></p>
         </div>
         <div>
-
         </div>
     </div>
     </div>
+    <BestSellers/>
+    </>
   )
 }
 
