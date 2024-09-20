@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './BestSellers.module.css'
 import { FaLongArrowAltRight } from "react-icons/fa";
+import Hero2 from '../HeroComponents/Hero2/Hero2';
 
 function BestSellers() {
   return (
@@ -73,6 +74,7 @@ function BestSellers() {
         </div>
 
     </div>
+    <Hero2/>
     </>
   )
 }

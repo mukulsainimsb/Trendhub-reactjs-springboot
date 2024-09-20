@@ -1,7 +1,5 @@
-/* Importing Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-/* General styles */
 * {
     margin: 0;
     padding: 0;
@@ -35,7 +33,6 @@ body {
     margin: 20px 0;
 }
 
-/* Stylish input field */
 .box1 input {
     width: 50vw;
     height: 45px;
@@ -53,7 +50,6 @@ body {
     box-shadow: 0 0 5px rgba(43, 190, 249, 0.5);
 }
 
-/* Stylish profile and cart icons */
 .profile, .cart {
     font-size: 28px;
     color: #333;
@@ -66,7 +62,6 @@ body {
     transform: scale(1.1);
 }
 
-/* Buttons with hover effects */
 .btn1, .btn2 {
     padding: 10px 20px;
     font-size: 16px;
@@ -105,7 +100,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Stylish navigation links */
 .ibox2 ul {
     display: flex;
     gap: 4vw;
@@ -130,7 +124,6 @@ body {
     color: #2bbef9;
 }
 
-/* Tablet view (768px - 1024px) */
 @media (max-width: 1024px) {
     .box1 input {
         width: 60vw;
@@ -151,7 +144,6 @@ body {
     }
 }
 
-/* Mobile view (max-width 768px) */
 @media (max-width: 768px) {
     .box1 {
         flex-direction: column;
@@ -190,7 +182,6 @@ body {
     }
 }
 
-/* Sidebar for mobile (optional addition) */
 .sidebar {
     display: none;
 }
