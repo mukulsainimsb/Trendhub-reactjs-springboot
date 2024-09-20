@@ -1,8 +1,10 @@
 import React from 'react'
 import styles from './ProductList.module.css'
+import ProductCount from '../ProductCount/ProductCount'
 
 function ProductList() {
   return (
+    <>
     <div className={styles.box}>
         <div className={styles.boxleft}>
             <div className={styles.container}>
@@ -128,6 +130,8 @@ function ProductList() {
 
         </div>
     </div>
+    <ProductCount/>
+    </>
   )
 }
 
