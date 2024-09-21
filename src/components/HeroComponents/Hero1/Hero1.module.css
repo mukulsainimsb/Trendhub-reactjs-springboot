@@ -4,7 +4,7 @@
     height: 100vh;
     width: 100vw;
     display: flex;
-    align-items: flex-start; /* Align text to the left */
+    align-items: flex-start; 
     background-image: url('salad.jpg');
     background-size: cover;
     background-position: center;
@@ -20,7 +20,7 @@
     justify-content: center;
     gap: 20px;
     font-family: 'Poppins', sans-serif;
-    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .ibox h1 {
@@ -42,7 +42,6 @@
     font-weight: 400;
 }
 
-/* Responsive adjustments */
 @media (max-width: 1200px) {
     .box {
         backdrop-filter: blur(8px);
@@ -57,7 +56,7 @@
     
     .box {
         backdrop-filter: blur(10px);
-        background-color: rgba(0, 0, 0, 0.3); /* Darker background overlay */
+        background-color: rgba(0, 0, 0, 0.3);
     }
 }
 
@@ -81,7 +80,7 @@
     
     .box {
         backdrop-filter: blur(12px);
-        background-color: rgba(0, 0, 0, 0.5); /* Even darker background overlay */
+        background-color: rgba(0, 0, 0, 0.5);
     }
 }
 
@@ -105,6 +104,6 @@
 
     .box {
         backdrop-filter: blur(15px);
-        background-color: rgba(0, 0, 0, 0.7); /* Darkest background overlay */
+        background-color: rgba(0, 0, 0, 0.7); 
     }
 }

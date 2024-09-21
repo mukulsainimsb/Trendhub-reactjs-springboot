@@ -11,7 +11,7 @@
     align-items: center;
     padding-bottom: 20px;
     border-bottom: 1px solid #333;
-    flex-wrap: wrap; /* Makes it responsive */
+    flex-wrap: wrap; 
 }
 
 .leftSide {
@@ -79,7 +79,7 @@
     align-items: center;
     margin-top: 30px;
     font-size: 0.9rem;
-    flex-wrap: wrap; /* Makes the layout responsive */
+    flex-wrap: wrap;
 }
 
 .links {
@@ -96,7 +96,6 @@
     text-decoration: underline;
 }
 
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
