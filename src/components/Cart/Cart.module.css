@@ -1,0 +1,134 @@
+.cartContainer {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  .title {
+    font-size: 2rem;
+    text-align: center;
+    color: #264653;
+    margin-bottom: 20px;
+  }
+  
+  .cartItems {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .cartItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .productImage {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .itemDetails {
+    flex-grow: 1;
+    padding: 0 15px;
+  }
+  
+  .itemName {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .price {
+    color: #e76f51;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .quantityControl {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .quantityButton {
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .removeButton {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .emptyCart {
+    text-align: center;
+    color: #888;
+    font-size: 1.2rem;
+  }
+  
+  .subtotalCard {
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .subtotalCard h3 {
+    font-size: 1.5rem;
+    color: #264653;
+    margin-bottom: 15px;
+  }
+  
+  .subtotalCard p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 5px 0;
+  }
+  .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .proceedButton {
+    background-color: #264653;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+  
+  .removeAllButton {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+  

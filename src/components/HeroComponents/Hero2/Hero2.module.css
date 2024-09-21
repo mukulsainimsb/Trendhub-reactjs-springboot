@@ -108,8 +108,8 @@
     background-size: cover;
     padding: 20px; 
     border-radius: 10px;
-    color: white; 
-    text-align: center; 
+    color: black; 
+    /* text-align: center;  */
 }
 
 .icon {

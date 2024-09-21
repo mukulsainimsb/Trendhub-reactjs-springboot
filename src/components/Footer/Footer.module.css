@@ -1,0 +1,118 @@
+.footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+    flex-wrap: wrap; /* Makes it responsive */
+}
+
+.leftSide {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.contactInfo {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+}
+
+.rightSide {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.appDownload {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.downloadText {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.storeLogos {
+    display: flex;
+    gap: 15px;
+}
+
+.storeLogo {
+    width: 120px;
+    height: auto;
+}
+
+.socialMedia {
+    display: flex;
+    gap: 15px;
+}
+
+.socialIcon {
+    width: 35px;
+    height: 35px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.socialIcon:hover {
+    transform: scale(1.2);
+}
+
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    flex-wrap: wrap; /* Makes the layout responsive */
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.privacyPolicy, .more {
+    color: #ff6347;
+    text-decoration: none;
+}
+
+.privacyPolicy:hover, .more:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .rightSide {
+        align-items: flex-start;
+    }
+
+    .footerBottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .storeLogos {
+        justify-content: flex-start;
+    }
+}

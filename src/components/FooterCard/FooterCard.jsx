@@ -1,8 +1,10 @@
 import React from 'react';
 import styles from './FooterCard.module.css';
+import AllCategoryList from '../CategoryListing/AllCategoryList';
 
 function FooterCard() {
   return (
+    <>
     <div className={styles.box}>
         <div className={styles.ibox}>
       <h6 className={styles.discount}>Upto 60% Discount On Your First Order</h6>
@@ -16,7 +18,9 @@ function FooterCard() {
       </div>
       </div>
     </div>
-  );
+    <AllCategoryList/>
+    </>
+    );
 }
 
 export default FooterCard;
