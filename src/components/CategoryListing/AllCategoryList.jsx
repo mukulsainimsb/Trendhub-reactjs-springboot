@@ -7,7 +7,7 @@ function AllCategoryList() {
     <>
     <div className={styles.container}>
       <div className={styles.box1}>
-        <h2>Fruits & Vegetables</h2>
+        <h2 className={styles.heading}>Fruits & Vegetables</h2>
         <ul>
           <li>Fresh Vegetables</li>
           <li>Herbs & Seasonings</li>
@@ -19,7 +19,7 @@ function AllCategoryList() {
         </ul>
       </div>
       <div className={styles.box2}>
-        <h2>BREAKFAST & DAIRY</h2>
+        <h2 className={styles.heading}>BREAKFAST & DAIRY</h2>
         <ul>
           <li>Milk & Flavoured Milk</li>
           <li>Butter and Margarine</li>
@@ -32,7 +32,7 @@ function AllCategoryList() {
         </ul>
       </div>
       <div className={styles.box3}>
-        <h2>MEAT & SEAFOOD</h2>
+        <h2 className={styles.heading}>MEAT & SEAFOOD</h2>
         <ul>
           <li>Breakfast Sausage</li>
           <li>Dinner Sausage</li>
@@ -45,7 +45,7 @@ function AllCategoryList() {
         </ul>
       </div>
       <div className={styles.box4}>
-        <h2>BEVERAGES</h2>
+        <h2 className={styles.heading}>BEVERAGES</h2>
         <ul>
           <li>Water</li>
           <li>Sparkling Water</li>
@@ -59,7 +59,7 @@ function AllCategoryList() {
         </ul>
       </div>
       <div className={styles.box5}>
-        <h2>BREADS & BAKERY</h2>
+        <h2 className={styles.heading}>BREADS & BAKERY</h2>
         <ul>
           <li>Bread</li>
           <li>Rolls</li>

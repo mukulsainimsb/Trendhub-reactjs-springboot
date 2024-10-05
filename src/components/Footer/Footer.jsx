@@ -37,7 +37,7 @@ function Footer() {
       </div>
 
       <div className={styles.footerBottom}>
-        <p>© 2008 Your Company. All Rights Reserved.</p>
+        <p>© 2008 Trendhub. All Rights Reserved.</p>
         <div className={styles.links}>
           <a href="/privacy-policy" className={styles.privacyPolicy}>Privacy Policy</a>
           <a href="/more" className={styles.more}>More</a>

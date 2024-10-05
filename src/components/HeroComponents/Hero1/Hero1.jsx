@@ -7,9 +7,9 @@ function Hero1() {
     <div className={styles.mainbox}>
     <div className={styles.box}>
       <div className={styles.ibox}>
-        <p>EXCLUSIVE OFFER 20% OFF</p>
-        <h1>Specialist in the grocery store</h1>
-        <p>Only this week. Don't miss...</p>
+        <p>GET 20% DISCOUNT IN EVERY BASKET</p>
+        <h1>SUPER FRUIT SALE</h1>
+        <p>This Sunday@7pm<br/> Don't miss...</p>
         <p>from<span>$7.99</span></p>
         </div>
         <div>

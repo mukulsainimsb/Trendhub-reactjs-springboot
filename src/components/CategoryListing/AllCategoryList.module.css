@@ -3,69 +3,75 @@
 .container {
   display: flex;
   justify-content: center;
-  align-items: stretch; 
-  font-family: 'Poppins', sans-serif;
-  color: #333;
-  padding: 40px 0;
+  align-items: stretch;
+  flex-wrap: wrap;
+  font-family: 'Poppins', sans-serif !important;
+  color: #333 !important;
+  padding: 40px 0 !important;
 }
 
 .box1, .box2, .box3, .box4, .box5 {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 18%;
-  margin: 0 10px;
-  flex-grow: 1;
+  background-color: #fff !important;
+  padding: 20px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+  width: 18% !important;
+  margin: 0 10px !important;
+  flex-grow: 1 !important;
 }
 
-h2 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 15px;
-  text-transform: uppercase;
+.heading {
+  font-size: 30px !important;
+  font-weight: 600 !important;
+  margin-bottom: 15px !important;
+  text-transform: uppercase !important;
+  color: #333 !important;
 }
 
 ul {
-  list-style-type: none;
-  padding: 0;
+  list-style-type: none !important;
+  padding: 0 !important;
 }
 
 li {
-  margin-bottom: 10px;
-  font-size: 14px;
-  line-height: 1.4;
-  position: relative;
-  padding-left: 20px;
+  margin-bottom: 10px !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  position: relative !important;
+  padding-left: 20px !important;
 }
 
-.box1 li:before {
-    content: "• ";
-    color: #ff4d66;
-    position: absolute;
-    left: 0;
+.box1 li:before, .box2 li:before, .box3 li:before, .box4 li:before, .box5 li:before {
+  content: "• " !important;
+  color: #ff4d66 !important;
+  position: absolute !important;
+  left: 0 !important;
+}
+
+@media (max-width: 1200px) {
+  .box1, .box2, .box3, .box4, .box5 {
+    width: 23% !important;
+    margin-bottom: 20px !important;
   }
-  .box2 li:before {
-    content: "• ";
-    color: #ff4d66;
-    position: absolute;
-    left: 0;
+}
+
+@media (max-width: 992px) {
+  .box1, .box2, .box3, .box4, .box5 {
+    width: 30% !important;
+    margin-bottom: 20px !important;
   }
-  .box3 li:before {
-    content: "• ";
-    color: #ff4d66;
-    position: absolute;
-    left: 0;
+}
+
+@media (max-width: 768px) {
+  .box1, .box2, .box3, .box4, .box5 {
+    width: 45% !important;
+    margin-bottom: 20px !important;
   }
-  .box4 li:before {
-    content: "• ";
-    color: #ff4d66;
-    position: absolute;
-    left: 0;
+}
+
+@media (max-width: 576px) {
+  .box1, .box2, .box3, .box4, .box5 {
+    width: 90% !important;
+    margin-bottom: 20px !important;
   }
-  .box5 li:before {
-    content: "• ";
-    color: #ff4d66;
-    position: absolute;
-    left: 0;
-  }
+}

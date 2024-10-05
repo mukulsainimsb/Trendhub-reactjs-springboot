@@ -56,6 +56,24 @@ body {
     transition: transform 0.3s ease, color 0.3s ease;
     cursor: pointer;
 }
+.cartContainer {
+    position: relative;
+    display: inline-block;
+}
+.cartCount {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .profile:hover, .cart:hover {
     color: #2bbef9;
@@ -106,6 +124,10 @@ body {
     list-style-type: none;
     padding: 0;
     font-size: 16px;
+}
+li{
+    cursor: pointer;
+
 }
 
 .ibox2 li {

@@ -50,7 +50,7 @@ function Hero2() {
           <div className={styles.details}>
             <p className={styles.oldprice}>$9.65</p>
             <p className={styles.newprice}>$5.99</p>
-            <h2>X-Pro Fitness Smartwatch</h2>
+            <h1>X-Pro Fitness Smartwatch</h1>
             <p className={styles.description}>Stay Connected and Fit with Our New Branding Smartwatch</p>
             <p className={styles.stock}>IN STOCK</p>
             <hr />

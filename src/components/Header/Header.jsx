@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './Header.module.css'
 import { CgProfile } from "react-icons/cg";
 import { CiShoppingCart } from "react-icons/ci";
@@ -7,9 +7,13 @@ import { MdFreeBreakfast } from "react-icons/md";
 import { MdBreakfastDining } from "react-icons/md";
 import { GiSlicedBread } from "react-icons/gi";
 import { IoFastFood } from "react-icons/io5";
-import Hero1 from '../HeroComponents/Hero1/Hero1';
+import { TrendhubContext } from '../../ContextAPI/TrendhubContext';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
+  const cartItemCount = 3;
+  const Navigate = useNavigate();
+
   return (
     <>
     <div className={styles.box}>
@@ -25,8 +29,10 @@ function Header() {
                  </div>
                  <input type='text' placeholder='Search for products...'></input>
                  <CgProfile className={styles.profile}/>
+                 <div className={styles.cartContainer}>
                  <CiShoppingCart className={styles.cart}/>
-
+                 <span className={styles.cartCount}>{cartItemCount}</span>
+           </div>
         </div>
          <div className={styles.box2}>
             <div className={styles.ibox1}>
@@ -45,17 +51,16 @@ function Header() {
    </div>
    <div className={styles.ibox2}>
     <ul>
-    <li>HOME</li>
-    <li>SHOP</li>
+    <li onClick={()=>Navigate('/')}>HOME</li>
+    <li>ELECTRONICS</li>
     <li>BAKERY</li>
     <li>BEVERAGES</li>
-    <li>BLOG</li>
-    <li>CONTACT</li>
+    <li onClick={()=>Navigate('/about')}>BLOG</li>
+    <li onClick={()=>Navigate('/contactus')}>CONTACT</li>
     </ul>
    </div>
         </div>
    </div>
-   <Hero1></Hero1>
    </>
   )
 }

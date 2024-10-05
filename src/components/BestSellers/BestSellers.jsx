@@ -9,7 +9,7 @@ function BestSellers() {
     <div className={styles.box}>
         <div className={styles.boxleft}>
             <div className={styles.boxleft1}>
-            <h2>Organic<br/>Dry Fruits</h2>
+            <h3>Organic<br/>Dry Fruits</h3>
             <p>UPTO</p>
             <h1>70%<span>OFF</span></h1>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing 

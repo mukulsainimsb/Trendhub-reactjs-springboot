@@ -3,132 +3,133 @@
     max-width: 800px;
     margin: 0 auto;
     font-family: 'Nunito', sans-serif;
-  }
-  
-  .title {
+    background-color: #f5f5f5;
+}
+
+.title {
     font-size: 2rem;
     text-align: center;
-    color: #264653;
+    color: #333;
     margin-bottom: 20px;
-  }
-  
-  .cartItems {
+}
+
+.cartItems {
     display: flex;
     flex-direction: column;
     gap: 15px;
-  }
-  
-  .cartItem {
+}
+
+.cartItem {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #ffffff;
     border-radius: 12px;
     padding: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .productImage {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.productImage {
     width: 80px;
     height: 80px;
     object-fit: cover;
     border-radius: 8px;
-  }
-  
-  .itemDetails {
+}
+
+.itemDetails {
     flex-grow: 1;
     padding: 0 15px;
-  }
-  
-  .itemName {
+}
+
+.itemName {
     font-size: 1.2rem;
-    color: #333;
-  }
-  
-  .price {
-    color: #e76f51;
+    color: #1e1e1e;
+}
+
+.price {
+    color: #555;
     font-size: 1.1rem;
     margin-bottom: 10px;
-  }
-  
-  .quantityControl {
+}
+
+.quantityControl {
     display: flex;
     align-items: center;
     gap: 10px;
-  }
-  
-  .quantityButton {
-    background-color: #2a9d8f;
+}
+
+.quantityButton {
+    background-color: #007bff;
     color: white;
     border: none;
     padding: 6px 12px;
-    border-radius: 8px;
+    border-radius: 4px;
     cursor: pointer;
     font-size: 1rem;
-  }
-  
-  .removeButton {
-    background-color: #e63946;
+}
+
+.removeButton {
+    background-color: #dc3545;
     color: white;
     border: none;
     padding: 8px 16px;
-    border-radius: 8px;
+    border-radius: 4px;
     cursor: pointer;
     font-size: 1rem;
-  }
-  
-  .emptyCart {
+}
+
+.emptyCart {
     text-align: center;
-    color: #888;
+    color: #777;
     font-size: 1.2rem;
-  }
-  
-  .subtotalCard {
-    background-color: #f1f1f1;
-    border-radius: 15px;
+}
+
+.subtotalCard {
+    background-color: #ffffff;
+    border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     margin-top: 20px;
     text-align: center;
-  }
-  
-  .subtotalCard h3 {
+}
+
+.subtotalCard h3 {
     font-size: 1.5rem;
-    color: #264653;
+    color: #333;
     margin-bottom: 15px;
-  }
-  
-  .subtotalCard p {
+}
+
+.subtotalCard p {
     font-size: 1.2rem;
-    color: #555;
+    color: #444;
     margin: 5px 0;
-  }
-  .btn{
+}
+
+.btn {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
-  }
-  
-  .proceedButton {
-    background-color: #264653;
+}
+
+.proceedButton {
+    background-color: #007bff;
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
     cursor: pointer;
     font-size: 1.1rem;
     margin-top: 10px;
-  }
-  
-  .removeAllButton {
-    background-color: #e63946;
+}
+
+.removeAllButton {
+    background-color: #dc3545;
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 8px;
+    border-radius: 4px;
     cursor: pointer;
     font-size: 1.1rem;
     margin-top: 10px;
-  }
-  
+}

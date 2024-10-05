@@ -1,0 +1,149 @@
+.teamContainer {
+    text-align: center;
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+.teamContainer h2 {
+    font-weight: 700;
+}
+
+.heading {
+    font-size: 36px;
+    color:  #0b2744 !important;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.description {
+    font-size: 18px;
+    color: #3b4445;
+    margin-bottom: 40px;
+    letter-spacing: 1.2px;
+}
+
+.teamMembers {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.member {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.member:hover {
+    transform: translateY(-10px);
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.name {
+    font-size: 22px;
+    color: #243f5a;
+    font-weight: bold;
+}
+
+.position {
+    font-size: 18px;
+    color: #7f8c8d;
+}
+
+.bio {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading h1 {
+    color: #0b2744;
+    margin-bottom: 60px;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 0px 0px 5px white;
+    padding: 20px;
+}
+
+.images {
+    display: flex;
+    gap: 30px;
+}
+
+.images img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.images p {
+    color: #1f3234;
+}
+
+.images h4 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.image1, .image2, .image3, .image4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    transition: background-color 0.4s ease;
+}
+
+.images div:hover {
+   background-color: rgba(219, 212, 212, 0.801);
+   transition: background-color 0.4s ease; 
+   transform: translateY(-10px); 
+}
+
+.images div:hover img {
+    transform: scale(1.1);
+}
+
+.images div:hover .chefsocial {
+    visibility: visible;
+}
+
+.chefsocial {
+    display: flex;
+    gap: 7px;
+    visibility: hidden;
+    transition: visibility 0.4s ease;
+}
+
+.cheficons {
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+}
