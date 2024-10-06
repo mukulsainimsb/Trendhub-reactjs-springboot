@@ -1,0 +1,91 @@
+.listBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.listCard {
+    width: calc(33.33% - 20px);
+    height: auto; 
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 10px;
+}
+
+.listCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.listDiscountLabel {
+    color: black;
+    font-weight: 500;
+}
+
+.listImage {
+    width: 100%;
+    height: 40vh; 
+    max-height: 40vh; 
+    object-fit: cover;
+    padding: 10px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.listPrice {
+    display: flex;
+    gap: .5em; 
+}
+
+.listText {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.listText p {
+    font-size: small;
+}
+
+.listTitle {
+    font-size: 2.5em;
+    color: black;
+    letter-spacing: 2px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.listDiscountedPrice {
+    font-size: 1.6rem; 
+    font-weight: bold; 
+    color: black; 
+}
+
+.listOriginalPrice {
+    text-decoration: line-through;
+    color: rgba(119, 119, 119, 1);
+}
+
+.listCartButton {
+    border-radius: 20px; 
+    width: calc(100% - 20px);
+    padding: 12px; 
+    background-color: #ff6347; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.listCartButton:hover {
+   background-color:#e5533d; 
+   transform: scale(1.05); 
+}

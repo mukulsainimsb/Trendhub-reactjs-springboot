@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap');
+
+.bakeryBannerBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url('breadbakery.jpg');
+  background-repeat: no-repeat;
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  padding: 20px;
+  color: white;
+  position: relative;
+}
+
+.bakeryMinibox1 {
+  padding-left: 60px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 50%;
+  animation: slideInRight 1.5s ease-in-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate(-100%);
+    opacity: 0;
+  }
+  
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.bakeryTitle {
+  font-size: 5.5rem; 
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin: 0;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.bakerySubtitle {
+  font-size: 2.5rem; 
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 20px;
+}
+
+.bakerySavings {
+  font-size: 1rem; 
+  font-family: 'Roboto', sans-serif;
+  margin: 15px 0;
+}
+
+.bakeryDiscount {
+  font-size: 7rem; 
+  font-family: 'Poppins', sans-serif;
+  color: rgb(242, 177, 11); 
+  margin-top: -40px;
+  margin-bottom: -25px;
+}
+
+.bakeryMinibox2 {
+   width:50%;
+}
+
+.bakeryOff {
+   font-size:2.5rem; 
+   font-family:'Roboto', sans-serif; 
+}
+
+@media (max-width:768px) {
+   .bakeryMinibox1 {
+       width:100%;
+       padding-left:30px;
+       padding-right:30px;
+   }
+
+   .bakeryTitle {
+       font-size:4rem; 
+   }
+
+   .bakerySubtitle {
+       font-size:1.8rem; 
+   }
+
+   .bakerySavings {
+       font-size:1.5rem; 
+   }
+
+   .bakeryDiscount {
+       font-size:4rem; 
+   }
+}

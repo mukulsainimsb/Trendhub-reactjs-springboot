@@ -15,6 +15,11 @@ body {
     flex-direction: column;
     background-color: #f7f7f7;
 }
+.box1 h1{
+    word-spacing: 3px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+}
 
 .box1 {
     display: flex;
@@ -127,7 +132,6 @@ body {
 }
 li{
     cursor: pointer;
-
 }
 
 .ibox2 li {
@@ -168,13 +172,16 @@ li{
 
 @media (max-width: 768px) {
     .box1 {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
         gap: 10px;
         text-align: center;
     }
 
     .box1 input {
-        width: 80vw;
+        width: 60vw;
         height: 40px;
     }
 
@@ -228,19 +235,6 @@ li{
         list-style: none;
         padding: 0;
         font-size: 20px;
-    }
-
-    .sidebar ul li {
-        margin: 20px 0;
-    }
-
-    .sidebar ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 22px;
-    }
-
-    .sidebar ul li a:hover {
-        color: #2bbef9;
+        gap:20px;
     }
 }

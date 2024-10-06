@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap');
+
+.fvBannerBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url('fruitvegetable.jpg');
+  background-repeat: no-repeat;
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  padding: 20px;
+  color: white;
+  position: relative;
+}
+
+.fvMinibox1 {
+  padding-left: 60px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 50%;
+  animation: slideInLeft 1.5s ease-in-out;
+}
+
+.fvTexts {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fvTitle {
+    font-size: 5em;
+}
+
+.fvSubtitle {
+    font-size: 2em;
+}
+
+.fvDiscount {
+    margin-top: -30px;
+    margin-bottom: -30px;
+}
+
+.fvSaveText {
+    font-size: 15px;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fvTitle, .fvSubtitle, .fvSaveText, .fvOffText {
+    font-family: 'Poppins', sans-serif; /* Consistent font family */
+}
+
+.fvTitle {
+    letter-spacing: 5px;
+    margin: 0;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.fvSubtitle {
+    font-size: 2.5rem; 
+    margin-top: 20px;
+}
+
+.fvOffText {
+    font-size: 2rem; 
+    margin: 15px 0; 
+}
+
+.fvDiscount {
+    font-size: 7rem; 
+    color: green; 
+}
+
+.fvMinibox2 {
+    width: 50%;
+}
+
+@media (max-width:768px) {
+  
+.fvMinibox1 {
+    width:100%;
+    padding-left:30px;
+    padding-right:30px;
+}
+
+.fvTitle {
+    font-size:2rem; 
+}
+
+.fvSubtitle {
+    font-size:1.8rem; 
+}
+
+.fvSaveText, .fvOffText {
+    font-size:1.5rem; 
+}
+
+.fvDiscount {
+    font-size:4rem; 
+}
+}

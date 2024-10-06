@@ -34,7 +34,7 @@ function BestSellers() {
     <img src='spices.jpg' alt='image' />
     <div>
         <h6>Lorem ipsum dolor sit.</h6>
-        <p>IN STOCK</p>
+        <p className={styles.paragraph}>IN STOCK</p>
         <div className={styles.price}>
             <p>$9.35</p>
             <span>$7.25</span>
@@ -47,7 +47,7 @@ function BestSellers() {
     <img src='spices.jpg' alt='image' />
     <div>
         <h6>Lorem ipsum dolor sit.</h6>
-        <p>IN STOCK</p>
+        <p className={styles.paragraph}>IN STOCK</p>
         <div className={styles.price}>
             <p>$9.35</p>
             <span>$7.25</span>
@@ -60,7 +60,7 @@ function BestSellers() {
     <img src='spices.jpg' alt='image' />
     <div>
         <h6>Lorem ipsum dolor sit.</h6>
-        <p>IN STOCK</p>
+        <p className={styles.paragraph}>IN STOCK</p>
         <div className={styles.price}>
             <p>$9.35</p>
             <span>$7.25</span>
