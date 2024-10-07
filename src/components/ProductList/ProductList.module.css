@@ -19,7 +19,7 @@
     background-color: rgba(255, 255, 255, 0.9); 
     border-radius: 10px; 
     padding: 10px; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
 }
 
 .containerimg img {
@@ -33,7 +33,8 @@
 }
 
 .containertext h6 {
-    font-size: 1rem; 
+    font-size: 1.5rem; 
+    letter-spacing: 1px;
     margin-bottom: 5px; 
 }
 
@@ -66,8 +67,8 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fcfcfc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s;
     margin-bottom: 20px; 
 }
@@ -83,6 +84,15 @@
     object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.discountLabel{
+    font-weight: 600;
+    color:#0b2744;
+}
+.pdname{
+    font-size: 1.5em;
+    letter-spacing: 1px;
 }
 
 .discount-label {

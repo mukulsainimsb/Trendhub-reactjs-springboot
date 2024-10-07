@@ -1,3 +1,4 @@
+/* Base styles */
 .listBox {
     display: flex;
     flex-wrap: wrap;
@@ -25,6 +26,45 @@
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .listCard {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .listCard {
+        width: calc(100% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .listCard {
+        width: 100%;
+        margin: 5px 0;
+        padding: 10px;
+    }
+
+    .listTitle {
+        font-size: 1.5em;
+    }
+
+    .listDiscountedPrice {
+        font-size: 1.2rem; 
+    }
+
+    .listImage {
+        height: 30vh;
+    }
+
+    .listCartButton {
+        padding: 10px;
+        width: 100%;
+    }
+}
+
+/* Other styles */
 .listDiscountLabel {
     color: black;
     font-weight: 500;

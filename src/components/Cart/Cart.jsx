@@ -1,55 +1,48 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import styles from './Cart.module.css';
+import { TrendhubContext } from '../../ContextAPI/TrendhubContext';
 
 const Cart = () => {
-  const [items, setItems] = useState([
-    {
-      id: 1,
-      name: 'Product 1',
-      price: 29.99,
-      image: 'https://via.placeholder.com/100',
-      quantity: 2,
-    },
-    {
-      id: 2,
-      name: 'Product 2',
-      price: 49.99,
-      image: 'https://via.placeholder.com/100',
-      quantity: 1,
-    },
-  ]);
+  const {cartItems,setCartItems} = useContext(TrendhubContext);
 
-  const handleQuantityChange = (id, delta) => {
-    setItems(items.map(item =>
-      item.id === id ? { ...item, quantity: Math.max(item.quantity + delta, 1) } : item
-    ));
-  };
-
-  const handleRemove = (id) => {
-    setItems(items.filter(item => item.id !== id));
-  };
-
-  const handleRemoveAll = () => {
-    setItems([]);
-  };
-
-  const subtotal = items.reduce((total, item) => total + item.price * item.quantity, 0);
-  const totalItems = items.reduce((total, item) => total + item.quantity, 0);
-
+  const handleQuantityChange=(item, change)=>{
+    console.log(cartItems)
+    setCartItems((prevItems)=>
+      prevItems.map((items)=>{
+        if(items.id===item){
+          const newQuantity = items.quantity + change;
+          return {...items, quantity:newQuantity > 0 ? newQuantity : 1}
+        }
+        return items;
+      })
+    )
+  }
+  const handleRemove=(itemId)=>{
+    setCartItems((prevItems)=>{
+     return prevItems.filter((item)=>{
+        return item.id!=itemId;
+      })
+    })
+  }
+  const handleRemoveAll=()=>{
+    setCartItems([]);
+  }
+  const totalItems = cartItems.reduce((total,item)=> item.quantity+total,0);
+  const subtotal = cartItems.reduce((total,item)=> item.price* item.quantity +total,0).toFixed(2);
   return (
     <div className={styles.cartContainer}>
       <h1 className={styles.title}>Shopping Cart</h1>
       <div className={styles.cartItems}>
-        {items.length > 0 ? (
-          items.map((item) => (
+        {cartItems ? (
+          cartItems.map((item) => (
             <div key={item.id} className={styles.cartItem}>
-              <img src={item.image} alt={item.name} className={styles.productImage} />
+              <img src={`http://localhost:8081/images/${item.image}`} alt={item.name} className={styles.productImage} />
               <div className={styles.itemDetails}>
-                <h2 className={styles.itemName}>{item.name}</h2>
-                <p className={styles.price}>${item.price.toFixed(2)}</p>
+                <h2 className={styles.cartitemName}>{item.name}</h2>
+                <p className={styles.price}>Price : ${item.price.toFixed(2)}</p>
                 <div className={styles.quantityControl}>
                   <button onClick={() => handleQuantityChange(item.id, -1)} className={styles.quantityButton}>-</button>
-                  <span>{item.quantity}</span>
+                  <span>Quantity : {item.quantity}</span>
                   <button onClick={() => handleQuantityChange(item.id, 1)} className={styles.quantityButton}>+</button>
                 </div>
               </div>
@@ -62,8 +55,8 @@ const Cart = () => {
       </div>
       <div className={styles.subtotalCard}>
         <h3>Cart Summary</h3>
-        <p>Total Items: {totalItems}</p>
-        <p>Subtotal: ${subtotal.toFixed(2)}</p>
+        <p>Total Items: {totalItems} </p>
+        <p>Subtotal: ${subtotal}</p>
         <div className={styles.btn}>
         <button className={styles.proceedButton}>Proceed to Buy</button>
         <button onClick={handleRemoveAll} className={styles.removeAllButton}>Remove All Items</button>

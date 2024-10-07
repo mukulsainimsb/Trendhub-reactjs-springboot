@@ -1,8 +1,10 @@
 import React from 'react';
 import styles from './FruitsVegetablesBanner.module.css';
 import BeverageBanner from '../../BeverageList/BeverageBanner/BeverageBanner';
+import List from '../../List';
 
 function FruitsVegetablesBanner() {
+  const productCategory = 'fruits&vegetables';
   return (
     <>
       <div className={styles.fvBannerBox}>
@@ -17,7 +19,7 @@ function FruitsVegetablesBanner() {
         </div>
         <div className={styles.fvMinibox2}></div>
       </div>
-      <BeverageBanner />
+      <List productCategory={productCategory}/>
     </>
   );
 }

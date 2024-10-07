@@ -2,10 +2,12 @@ import React, { useContext, useEffect } from 'react'
 import styles from './ProductList.module.css'
 import ProductCount from '../ProductCount/ProductCount'
 import { TrendhubContext } from '../../ContextAPI/TrendhubContext'
+import { useNavigate } from 'react-router-dom'
 
 function ProductList() {
+    const navigate = useNavigate();
 
-    const {allProducts} = useContext(TrendhubContext);
+    const {allProducts,addToCart} = useContext(TrendhubContext);
 
     useEffect(()=>{
             if(allProducts!=='' && allProducts.length>0){
@@ -14,9 +16,18 @@ function ProductList() {
         },[allProducts]
     );
 
+    const handleProduct=(products)=>{
+        navigate('/product', { state: { products } });
+      }
+
     const DisplayIndexesLeft = [8,22,44,67];
     const DisplayIndexesRight = [23,66,46,93,72,83];
 
+    const handleAddToCart=(product,event)=>{
+        event.preventDefault();
+        event.stopPropagation();
+        addToCart(product);
+    }
   return (
     <>
     <div className={styles.box}>
@@ -25,7 +36,7 @@ function ProductList() {
                 (index)=>{
                     const Product = allProducts[index];
                     return (
-                        <div key={index} className={styles.container}>
+                        <div onClick={()=>handleProduct(Product)} key={index} className={styles.container}>
                 <div className={styles.containerimg}>
                 <img src={`http://localhost:8081/images/${Product.image}`}></img>
             </div>
@@ -39,23 +50,23 @@ function ProductList() {
                 }
             </div>
        
-       
+    
         <div className={styles.boxright}>  
             {allProducts.length> 0 ? DisplayIndexesRight.map((index)=>{
                 const ProductRight = allProducts[index];
                 return (
-                    <div className={styles.card}>
+                    <div onClick={()=>handleProduct(ProductRight)} key={index} className={styles.card}>
     <div className={styles.discountLabel}>{ProductRight.discount}% OFF</div>
     <img src={`http://localhost:8081/images/${ProductRight.image}`} alt='image' />
     <div>
-        <h6>{ProductRight.name}</h6>
-        {ProductRight.stock ? <p style={{color: 'green'}}>IN STOCK</p> : <p style={{color: 'red'}}>OUT OF STOCK</p>}
+        <h6 className={styles.pdname}>{ProductRight.name}</h6>
+        {ProductRight.stock ? <p style={{color: 'green', fontSize:'0.8em'}}>IN STOCK</p> : <p style={{color: 'red', fontSize:'0.8em'}}>OUT OF STOCK</p>}
         <div className={styles.price}>
             <p>${ProductRight.price}</p>
             <span>${ProductRight.newPrice}</span>
         </div>
     </div>
-    <button className={styles.cartbtn}>Add to cart</button>
+    <button onClick={(event)=>handleAddToCart(ProductRight,event)} className={styles.cartbtn}>Add to cart</button>
    </div> 
           )
             }) : <p>No Items Available</p>

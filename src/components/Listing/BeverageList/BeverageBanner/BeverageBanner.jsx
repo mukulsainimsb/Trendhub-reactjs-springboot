@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './BeverageBanner.module.css';
-
+import List from '../../List'
 function BeverageBanner() {
+  const productCategory = 'beverages';
   return (
     <>
       <div className={styles.beverageBox}>
@@ -14,6 +15,7 @@ function BeverageBanner() {
         </div>
         <div className={styles.beverageMinibox2}></div>
       </div>
+      <List productCategory={productCategory}/>
     </>
   );
 }

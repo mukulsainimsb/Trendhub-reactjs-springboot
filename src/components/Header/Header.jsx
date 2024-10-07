@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styles from './Header.module.css';
 import { CgProfile } from "react-icons/cg";
 import { CiShoppingCart } from "react-icons/ci";
@@ -6,12 +6,20 @@ import { GiFruitBowl } from "react-icons/gi";
 import { MdFreeBreakfast, MdBreakfastDining } from "react-icons/md";
 import { GiSlicedBread } from "react-icons/gi";
 import { IoFastFood } from "react-icons/io5";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { GrTechnology } from "react-icons/gr";
+import Product from '../Product/Product';
+import { TrendhubContext } from '../../ContextAPI/TrendhubContext';
 
 function Header() {
-  const cartItemCount = 3;
   const navigate = useNavigate();
+  const {cartItems} = useContext(TrendhubContext);
+  const cartItemCount = cartItems.length;
 
+  const handleSearch=(event)=>{
+    const keyword = event.target.value;
+    navigate('/search', {state : {keyword}})
+  }
   return (
     <>
       <div className={styles.box}>
@@ -25,10 +33,10 @@ function Header() {
               <li><a className='dropdown-item' href='#'>hello</a></li>
             </ul>
           </div>
-          <input type='text' placeholder='Search for products...' />
-          <CgProfile className={styles.profile} />
+          <input onChange={handleSearch} type='text' placeholder='Search for products...' />
+          <CgProfile onClick={()=>navigate('/profile')} className={styles.profile} />
           <div className={styles.cartContainer}>
-            <CiShoppingCart className={styles.cart} />
+            <CiShoppingCart className={styles.cart} onClick={()=>navigate('/cart')} />
             <span className={styles.cartCount}>{cartItemCount}</span>
           </div>
         </div>
@@ -39,11 +47,12 @@ function Header() {
                 All Collections
               </button>
               <ul className="dropdown-menu">
-                <li><a className='dropdown-item' href='#'><GiFruitBowl /> Fruits & Vegetables</a></li>
-                <li><a className='dropdown-item' href='#'><MdBreakfastDining /> Breakfast & Dairy</a></li>
-                <li><a className='dropdown-item' href='#'><GiSlicedBread /> Breads & Bakery</a></li>
-                <li><a className='dropdown-item' href='#'><IoFastFood /> Biscuits & Snacks</a></li>
-                <li><a className='dropdown-item' href='#'><MdFreeBreakfast /> Beverages</a></li>
+                <li><a className='dropdown-item' href='/fruits&vegetables'><GiFruitBowl /> Fruits & Vegetables</a></li>
+                <li><a className='dropdown-item' href='/breakfast&dairy'><MdBreakfastDining /> Breakfast & Dairy</a></li>
+                <li><a className='dropdown-item' href='/bread&bakery'><GiSlicedBread /> Breads & Bakery</a></li>
+                <li><a className='dropdown-item' href='/meat&seafood'><IoFastFood />Meat & Seafood</a></li>
+                <li><a className='dropdown-item' href='/beverages'><MdFreeBreakfast /> Beverages</a></li>
+                <li><a className='dropdown-item' href='/electronics'><GrTechnology /> Electronics</a></li>
               </ul>
             </div>
           </div>
