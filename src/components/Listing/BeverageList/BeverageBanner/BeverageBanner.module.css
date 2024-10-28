@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap');
+
+.beverageBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url('beverage2.jpg');
+  background-repeat: no-repeat;
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  padding: 20px;
+  color: white;
+  position: relative;
+}
+
+.beverageMinibox1 {
+  padding-left: 60px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 50%;
+  animation: slideInLeft 1.5s ease-in-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.beverageTitle {
+  font-size: 5rem; 
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 5px;
+  margin: 0;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.beverageSubtitle {
+  font-size: 2.5rem; 
+  font-family: 'Poppins', sans-serif;
+  margin-top: 20px;
+}
+
+.beverageSavings {
+  font-size: 2rem; 
+  font-family: 'Roboto', sans-serif;
+  margin: 15px 0;
+}
+
+.beverageDiscount {
+  font-size: 7rem; 
+  font-family: 'Poppins', sans-serif;
+  color: #ffcc00; 
+}
+
+.beverageMinibox2 {
+  width: 50%;
+}
+
+.beverageOff {
+  font-size: 2rem; 
+  font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width:768px) {
+  .beverageMinibox1 {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .beverageTitle {
+    font-size: 4rem; 
+  }
+
+  .beverageSubtitle {
+    font-size: 1.8rem; 
+  }
+
+  .beverageSavings {
+    font-size: 1.5rem; 
+  }
+
+  .beverageDiscount {
+    font-size: 4rem; 
+  }
+}

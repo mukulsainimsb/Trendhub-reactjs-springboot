@@ -21,9 +21,15 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
+.card h6{
+    margin-top: 10px;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 .boxleft {
-    background-image: url("dryfruit.jpg");
+    background-image:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url("dryfruitbg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -38,7 +44,7 @@ body {
 .boxleft1 {
     width: 100%;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     text-align: center;
 }
@@ -47,11 +53,12 @@ body {
     font-size: 2.2rem;
     font-weight: 600;
     margin-bottom: 10px;
+    color: #fcf9f9;
 }
 
 .boxleft1 p {
     font-size: 0.9rem;
-    color: #777;
+    color: #d9d2d2;
     margin: 10px 0;
 }
 
@@ -83,7 +90,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 20px;
+    margin-left: 10px;
 }
 
 .rightup {
@@ -128,7 +135,6 @@ body {
 .rightdown {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .card {
@@ -141,7 +147,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s;
     position: relative;
 }
@@ -158,16 +164,22 @@ body {
     border-top-right-radius: 10px;
     position: relative;
 }
+.paragraph{
+    font-size: 13px;
+}
+.price p{
+    font-size: 1.4em;
+    font-weight: 500;
+}
 
-.discount-label {
+.discountLabel {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    left: 0px;
     background-color: #ff6347;
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     font-weight: 600;
     z-index: 1;
 }

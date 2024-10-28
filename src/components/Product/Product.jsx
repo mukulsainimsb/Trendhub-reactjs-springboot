@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import styles from './Product.module.css';
+import { useLocation } from 'react-router-dom';
 
 const Product = () => {
+  const location = useLocation();
+  const product = location.state?.products;
   const [quantity, setQuantity] = useState(1);
 
   const increaseQuantity = () => {
@@ -24,7 +27,7 @@ const Product = () => {
     
         <div className={styles.imageSection}>
           <img
-            src="https://via.placeholder.com/500x300"
+            src={`http://localhost:8081/images/${product.image}`}
             alt="Product"
             className={styles.productImage}
           />
@@ -32,16 +35,17 @@ const Product = () => {
 
         
         <div className={styles.detailsSection}>
-          <h1 className={styles.productName}>Stylish Colorful Product</h1>
+          <h1 className={styles.productName}>{product.name}</h1>
           <div className={styles.priceSection}>
-            <p className={styles.price}>$49.99</p>
+            <p className={styles.price}>Price : ${product.price}</p>
             <div className={styles.rating}>
               <span>⭐⭐⭐⭐☆</span> (120 reviews)
             </div>
           </div>
-          <p className={styles.inStock}>In Stock</p>
+          {product.stock ? <p style={{color:'green'}} className={styles.inStock}>IN STOCK</p>
+           : <p style={{color:'red'}} className={styles.inStock}>OUT OF STOCK</p> }
           <p className={styles.productDescription}>
-            This colorful product is perfect for your modern lifestyle. Made from premium materials, it’s designed to be durable, stylish, and comfortable.
+            Product Category : {product.category}
           </p>
 
           
@@ -54,14 +58,6 @@ const Product = () => {
             <button onClick={addToCart} className={styles.addToCartButton}>Add to Cart</button>
           </div>
         </div>
-      </div>
-
-      <div className={styles.additionalInfo}>
-        <h2>Product Information</h2>
-        <p><strong>Expiry Date:</strong> December 31, 2025</p>
-        <p><strong>MFG Date:</strong> January 01, 2023</p>
-        <p><strong>Brand:</strong> Stylish Brand</p>
-        <p>Known for innovation and quality, Stylish Brand delivers premium products designed for everyday life.</p>
       </div>
     </div>
   );
