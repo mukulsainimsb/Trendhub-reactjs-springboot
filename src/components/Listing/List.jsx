@@ -11,7 +11,7 @@ function List({productCategory}) {
     filteredtems = productCategory;
   }
   else{
-   filteredtems = allProducts.filter((items)=>{
+   filteredtems = allProducts && allProducts.filter((items)=>{
     return items.category=== productCategory;
   })
 }
@@ -27,7 +27,7 @@ function List({productCategory}) {
 
   return (
     <div className={styles.listBox}>
-      {filteredtems.length>0 ? filteredtems.map((items,index)=>{
+      {filteredtems && filteredtems.length>0 ? filteredtems.map((items,index)=>{
         return (
         <div key={index} className={styles.listCard}>
           <div className={styles.listDiscountLabel}>{items.discount}% OFF</div>

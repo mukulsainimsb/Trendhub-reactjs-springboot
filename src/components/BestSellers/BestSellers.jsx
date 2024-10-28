@@ -44,7 +44,7 @@ function BestSellers() {
             </div>
             <div className={styles.rightdown}>
 
-        {allProducts.length>0 ? displayItems.map((index)=>{
+        {allProducts && allProducts.length > 0 ? displayItems.map((index)=>{
           const Product = allProducts[index];
              return ( 
              <div onClick={()=>handleProduct(Product)} key={index} className={styles.card}>
@@ -79,6 +79,7 @@ function BestSellers() {
     <Hero2/>
     </>
   )
+  
 }
 
 export default BestSellers

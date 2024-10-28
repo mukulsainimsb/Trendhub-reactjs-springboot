@@ -18,6 +18,9 @@ import ScrollComponent from './components/ScrollComponent/ScrollComponent'
 import AllProduct from './components/AllProductList/AllProduct'
 import Cart from './components/Cart/Cart'
 import Profile from './components/UserProfile/Profile'
+import LoginForm from './components/Login/LoginForm'
+import RegisterForm from './components/Register/RegisterForm'
+import Checkout from './components/Checkout/Checkout'
 function App() {
 
   return (
@@ -39,6 +42,8 @@ function App() {
       <Route path='/search' element={<AllProduct/>}/>
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/profile' element={<Profile/>}/>
+      <Route path='/checkout' element={<Checkout/>}/>
+      <Route path='/login' element={<LoginForm/>}/>
     </Routes>
     </BrowserRouter>
     </>

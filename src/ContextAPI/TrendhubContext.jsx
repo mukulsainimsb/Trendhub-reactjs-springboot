@@ -1,10 +1,19 @@
 import { createContext, useEffect, useState } from "react";
-import { retrieveAllProducts } from "../TrendhubAPI/TrendhubApi";
+import { retrieveAllProducts, logout, loginapi, getUserByEmail } from "../TrendhubAPI/TrendhubApi";
+import { useNavigate } from "react-router-dom";
 
 export const TrendhubContext = createContext();
 
 function ContextProvider({ children }) {
     const [allProducts, setAllProducts] = useState([]);
+    const[currentUser,setCurrentUser]=useState({
+        username : '',
+        email : '',
+        phone : ''
+    });
+
+    const[errorMessage,setErrorMessage]=useState('')
+    const[isAuthenticated,setAuthenticated]=useState(false);
     const [cartItems, setCartItems] = useState(() => {
         const savedCartItems = localStorage.getItem("cartItems");
         return savedCartItems ? JSON.parse(savedCartItems) : [];
@@ -16,9 +25,45 @@ function ContextProvider({ children }) {
         setAllProducts(response.data);
     };
 
+    const handleuser = async (username) => {
+        try {
+            const response = await getUserByEmail(username);
+            setCurrentUser({
+                username : response.data.username,
+                email : response.data.email,
+                phone : response.data.phone
+            })
+        } catch (error) {
+            console.error("Error in handleuser:", error);
+        }
+    };
+
+    const handleLogin = async (username, password) => {
+        try {
+            const user = await loginapi(username, password);
+            handleuser(username);
+            setAuthenticated(true)
+            setErrorMessage('');
+            
+        } catch (error) {
+            console.error("Login failed:", error);
+            setAuthenticated(false);
+            setErrorMessage('Invalid username or password');
+        }
+    };
+
+    const handleLogout = () => {
+        setAuthenticated(false)
+        logout(); 
+        console.log(isAuthenticated)
+    };
     useEffect(() => {
-        getAllProductsApi();
-    }, []);
+        if (isAuthenticated) {
+            getAllProductsApi();
+        } else {
+            setAllProducts([]);
+        }
+    }, [isAuthenticated]);
 
     useEffect(() => {
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
@@ -38,7 +83,17 @@ function ContextProvider({ children }) {
     };
 
     return (
-        <TrendhubContext.Provider value={{ allProducts, addToCart, cartItems, setCartItems }}>
+        <TrendhubContext.Provider value={{ allProducts, 
+        addToCart, 
+        cartItems, 
+        setCartItems,
+        handleLogin,
+        handleLogout,
+        isAuthenticated,
+        setAuthenticated,
+        errorMessage,
+        currentUser
+        }}>
             {children}
         </TrendhubContext.Provider>
     );

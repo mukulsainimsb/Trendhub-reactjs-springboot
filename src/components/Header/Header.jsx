@@ -10,10 +10,13 @@ import { Link, useNavigate } from 'react-router-dom';
 import { GrTechnology } from "react-icons/gr";
 import Product from '../Product/Product';
 import { TrendhubContext } from '../../ContextAPI/TrendhubContext';
+import { retrieveAllProducts } from '../../TrendhubAPI/TrendhubApi';
+import { CiLogin } from "react-icons/ci";
+
 
 function Header() {
   const navigate = useNavigate();
-  const {cartItems} = useContext(TrendhubContext);
+  const {cartItems, isAuthenticated} = useContext(TrendhubContext);
   const cartItemCount = cartItems.length;
 
   const handleSearch=(event)=>{
@@ -30,11 +33,16 @@ function Header() {
               Location
             </button>
             <ul className="dropdown-menu">
-              <li><a className='dropdown-item' href='#'>hello</a></li>
+              <li><Link className='dropdown-item' to='#'>hello</Link></li>
             </ul>
           </div>
           <input onChange={handleSearch} type='text' placeholder='Search for products...' />
-          <CgProfile onClick={()=>navigate('/profile')} className={styles.profile} />
+         
+         {isAuthenticated ?
+              <CgProfile onClick={()=>navigate('/profile')} className={styles.profile} />
+          :
+          <CiLogin onClick={()=>navigate('/login')} className={styles.profile} /> }
+        
           <div className={styles.cartContainer}>
             <CiShoppingCart className={styles.cart} onClick={()=>navigate('/cart')} />
             <span className={styles.cartCount}>{cartItemCount}</span>
@@ -47,12 +55,12 @@ function Header() {
                 All Collections
               </button>
               <ul className="dropdown-menu">
-                <li><a className='dropdown-item' href='/fruits&vegetables'><GiFruitBowl /> Fruits & Vegetables</a></li>
-                <li><a className='dropdown-item' href='/breakfast&dairy'><MdBreakfastDining /> Breakfast & Dairy</a></li>
-                <li><a className='dropdown-item' href='/bread&bakery'><GiSlicedBread /> Breads & Bakery</a></li>
-                <li><a className='dropdown-item' href='/meat&seafood'><IoFastFood />Meat & Seafood</a></li>
-                <li><a className='dropdown-item' href='/beverages'><MdFreeBreakfast /> Beverages</a></li>
-                <li><a className='dropdown-item' href='/electronics'><GrTechnology /> Electronics</a></li>
+                <li><Link className='dropdown-item' to='/fruits&vegetables'><GiFruitBowl /> Fruits & Vegetables</Link></li>
+                <li><Link className='dropdown-item' to='/breakfast&dairy'><MdBreakfastDining /> Breakfast & Dairy</Link></li>
+                <li><Link className='dropdown-item' to='/bread&bakery'><GiSlicedBread /> Breads & Bakery</Link></li>
+                <li><Link className='dropdown-item' to='/meat&seafood'><IoFastFood />Meat & Seafood</Link></li>
+                <li><Link className='dropdown-item' to='/beverages'><MdFreeBreakfast /> Beverages</Link></li>
+                <li><Link className='dropdown-item' to='/electronics'><GrTechnology /> Electronics</Link></li>
               </ul>
             </div>
           </div>

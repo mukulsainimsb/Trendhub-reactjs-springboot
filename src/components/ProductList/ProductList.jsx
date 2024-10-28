@@ -10,7 +10,7 @@ function ProductList() {
     const {allProducts,addToCart} = useContext(TrendhubContext);
 
     useEffect(()=>{
-            if(allProducts!=='' && allProducts.length>0){
+            if(allProducts && allProducts.length>0){
                 console.log(allProducts[1])
             }
         },[allProducts]
@@ -32,7 +32,7 @@ function ProductList() {
     <>
     <div className={styles.box}>
         <div className={styles.boxleft}>
-            {allProducts.length>0 ? DisplayIndexesLeft.map(
+            {allProducts && allProducts.length>0 ? DisplayIndexesLeft.map(
                 (index)=>{
                     const Product = allProducts[index];
                     return (
@@ -52,7 +52,7 @@ function ProductList() {
        
     
         <div className={styles.boxright}>  
-            {allProducts.length> 0 ? DisplayIndexesRight.map((index)=>{
+            {allProducts && allProducts.length> 0 ? DisplayIndexesRight.map((index)=>{
                 const ProductRight = allProducts[index];
                 return (
                     <div onClick={()=>handleProduct(ProductRight)} key={index} className={styles.card}>
