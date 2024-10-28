@@ -1,4 +1,4 @@
-package com.ecommerce.trendhub.trendhub_backend.entity;
+package com.ecommerce.trendhub.trendhub_backend.model;
 
 import java.math.BigDecimal;
 

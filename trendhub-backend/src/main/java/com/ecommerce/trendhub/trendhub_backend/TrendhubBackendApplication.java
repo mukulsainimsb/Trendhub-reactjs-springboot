@@ -15,12 +15,16 @@ public class TrendhubBackendApplication {
 	
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
-		return new WebMvcConfigurer() {
-			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**")
-				.allowedMethods("*")
-				.allowedOrigins("http://localhost:5173");
-			}
-		};
+	    return new WebMvcConfigurer() {
+	        @Override
+	        public void addCorsMappings(CorsRegistry registry) {
+	            registry.addMapping("/**")
+	                .allowedOrigins("http://localhost:5173")
+	                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+	                .allowedHeaders("Authorization", "Content-Type")
+	                .allowCredentials(true);
+	        }
+	    };
 	}
+
 }
