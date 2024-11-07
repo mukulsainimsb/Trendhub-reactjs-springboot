@@ -47,5 +47,5 @@ export const getCurrentUser = () => {
 export const retrieveAllProducts = () => axiosInstance.get('/get-all-products');
 export const userRegisterApiCall = (data) => axiosInstance.post('/save-user', data);
 export const getUserByEmail = (email) => axiosInstance.get(`/get-user-by-email/${email}`);
-
+export const getRecommendationApi = (clothingCondition) => axiosInstance.post('/api/condition/recommend', clothingCondition);
 export default axiosInstance;

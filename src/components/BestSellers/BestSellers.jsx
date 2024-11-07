@@ -4,6 +4,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import Hero2 from '../HeroComponents/Hero2/Hero2';
 import { TrendhubContext } from '../../ContextAPI/TrendhubContext';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { toast, Zoom } from 'react-toastify';
 
 function BestSellers() {
   const navigate = useNavigate();
@@ -18,6 +19,17 @@ function BestSellers() {
     const handleAddToCart=(product, event)=>{
       event.preventDefault();
       event.stopPropagation();
+      toast.success('item is added', {
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Zoom
+        });
       addToCart(product);
     }
 

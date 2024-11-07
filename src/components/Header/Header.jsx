@@ -28,13 +28,10 @@ function Header() {
       <div className={styles.box}>
         <div className={styles.box1}>
           <h1>TRENDHUB</h1>
-          <div className="btn-group">
-            <button className={`btn btn-lg dropdown-toggle ${styles.btn1}`} type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Location
+          <div>
+            <button onClick={()=>navigate('/recommendation')} className={styles.btn1} type="button">
+              GarmentGuide
             </button>
-            <ul className="dropdown-menu">
-              <li><Link className='dropdown-item' to='#'>hello</Link></li>
-            </ul>
           </div>
           <input onChange={handleSearch} type='text' placeholder='Search for products...' />
          

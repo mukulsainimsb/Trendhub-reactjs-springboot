@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import styles from './List.module.css';
 import { TrendhubContext } from '../../ContextAPI/TrendhubContext';
 import { useNavigate } from 'react-router-dom';
+import { toast, Zoom } from 'react-toastify';
 
 function List({productCategory}) {
   let filteredtems = [];
@@ -22,6 +23,17 @@ function List({productCategory}) {
   const handleAddToCart=(product,event)=>{
     event.preventDefault();
     event.stopPropagation();
+    toast.success('item is added', {
+      position: "top-right",
+      autoClose: 1000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      transition: Zoom
+      });
     addToCart(product);
   }
 

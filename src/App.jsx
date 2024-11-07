@@ -21,6 +21,7 @@ import Profile from './components/UserProfile/Profile'
 import LoginForm from './components/Login/LoginForm'
 import RegisterForm from './components/Register/RegisterForm'
 import Checkout from './components/Checkout/Checkout'
+import ConditionForm from './ConditionComponents/ConditionForm/ConditionForm'
 function App() {
 
   return (
@@ -44,6 +45,8 @@ function App() {
       <Route path='/profile' element={<Profile/>}/>
       <Route path='/checkout' element={<Checkout/>}/>
       <Route path='/login' element={<LoginForm/>}/>
+      <Route path='/register' element={<RegisterForm/>}/>
+      <Route path='/recommendation' element={<ConditionForm/>}/>
     </Routes>
     </BrowserRouter>
     </>

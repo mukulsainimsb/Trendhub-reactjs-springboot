@@ -3,6 +3,7 @@ import styles from './ProductList.module.css'
 import ProductCount from '../ProductCount/ProductCount'
 import { TrendhubContext } from '../../ContextAPI/TrendhubContext'
 import { useNavigate } from 'react-router-dom'
+import { toast, Zoom } from 'react-toastify';
 
 function ProductList() {
     const navigate = useNavigate();
@@ -26,6 +27,17 @@ function ProductList() {
     const handleAddToCart=(product,event)=>{
         event.preventDefault();
         event.stopPropagation();
+        toast.success('item is added', {
+            position: "top-right",
+            autoClose: 1000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            transition: Zoom
+            });
         addToCart(product);
     }
   return (
